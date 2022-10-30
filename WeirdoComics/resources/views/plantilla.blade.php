@@ -24,7 +24,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold w-bold text-decoration-line-through':'' }}" aria-current="page" href=" {{ route('apPrin') }} "> Inicio </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold w-bold ':'' }}" aria-current="page" href=" {{ route('apPrin') }} "> Inicio </a>
         </li>
         
         </li>
@@ -41,15 +41,15 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs()? 'text-success fw-bold text-decoration-line-through':'' }}" href= " {{ route() }} "> Pedidos </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold ':'' }}" href= " {{ route('apRegi') }} "> Pedidos </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs()? 'text-success fw-bold text-decoration-line-through':'' }}" href= " {{ route() }} "> Stock </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold ':'' }}" href= " {{ route('apRegi') }} "> Stock </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs()? 'text-success fw-bold text-decoration-line-through':'' }}" href= " {{ route() }} "> Ventas </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold ':'' }}" href= " {{ route('apRegi') }} "> Ventas </a>
         </li>
 
 
