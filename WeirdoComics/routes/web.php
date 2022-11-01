@@ -16,7 +16,13 @@ Route::get('/', function () {
 
 Route::get('/', [controladorVistas::class,'showWelcome'])->name('apWelc');  
 Route::get('Principal', [controladorVistas::class,'showPrincipal'])->name('apPrin');
-Route::get('Registro', [controladorVistas::class,'showRegistro'])->name('apRegi');
+Route::get('RegistroComic', [controladorVistas::class,'showRegistroComic'])->name('apRegiCom');
+Route::get('RegistroArticulo', [controladorVistas::class,'showRegistroArticulo'])->name('apRegiArt');
+Route::get('RegistroProveedores', [controladorVistas::class,'showProveedores'])->name('apProvee');
+Route::get('Pedidos', [controladorVistas::class,'showPedidos'])->name('apPedid');
+Route::get('Stock', [controladorVistas::class,'showStock'])->name('apStock');
+Route::get('Ventas', [controladorVistas::class,'showVentas'])->name('apVentas');
 
 /*Rutas POST para envio de datos en formulario*/
-Route::post('CargarRegistro', [controladorVistas::class,'procesarRegistro'])->name('CarReg');
+Route::post('CargarRegistroComic', [controladorVistas::class,'procesarRegistroComic'])->name('CarRegCom');
+Route::post('CargarRegistroArticulo', [controladorVistas::class,'procesarRegistroArticulo'])->name('CarRegArt');
