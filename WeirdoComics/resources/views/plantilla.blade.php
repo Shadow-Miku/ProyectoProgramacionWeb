@@ -195,7 +195,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold w-bold ':'' }}" aria-current="page" href=" {{ route('apPrin') }} "> Inicio </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? '':'' }}"  href=" {{ route('apPrin') }} "> Inicio </a>
         </li>
         
         </li>
@@ -204,25 +204,28 @@
             Registrar
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ route('apRegi') }}">Registrar Comics</a></li>
-            <li><a class="dropdown-item" href="">Registrar Articulos</a></li>
+            <li><a class="dropdown-item" href="{{ route('apRegiCom') }}">Registrar Comics</a></li>
+            <li><a class="dropdown-item" href="{{ route('apRegiArt') }}">Registrar Articulos</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="">Something else here</a></li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold ':'' }}" href= " {{ route('apRegi') }} "> Pedidos </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? '':'' }}"  href= " {{ route('apProvee') }} "> Proveedores </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold ':'' }}" href= " {{ route('apRegi') }} "> Stock </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? '':'' }}"  href= " {{ route('apPedid') }} "> Pedidos </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('apPrin')? 'text-success fw-bold ':'' }}" href= " {{ route('apRegi') }} "> Ventas </a>
+          <a class="nav-link {{ request()->routeIs('apPrin')? '':'' }}"  href= " {{ route('apStock') }} "> Stock </a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('apPrin')? '':'' }}"  href= " {{ route('apVentas') }} "> Ventas </a>
+        </li>
 
       </ul>
     </div>

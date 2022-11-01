@@ -7,9 +7,13 @@ use App\Http\Requests\ValidadorRegistro;
 
 class controladorVistas extends Controller
 {
-    public function procesarRegistro(ValidadorRegistro $req){
-        return redirect('Registro')->with('confirmacion','Registro de libro Correcto');
-    } /* Funcion para registrar los libros en el formulario   procesar registro es lo que se mandara a llamar en la ruta */
+    public function procesarRegistroComic(ValidadorRegistro $req){
+        return redirect('RegistroComic')->with('confirmacion','Registro de Comic Correcto');
+    } /* Funcion para registrar los comics en el formulario   procesar registro es lo que se mandara a llamar en la ruta */
+
+    public function procesarRegistroArticulo(ValidadorRegistro $req){
+        return redirect('RegistroArticulo')->with('confirmacion','Registro de Articulo Correcto');
+    } /* Funcion para registrar los comics en el formulario   procesar registro es lo que se mandara a llamar en la ruta */
 
     /*Funciones para cada vista de la pagina*/
     public function showWelcome(){
@@ -20,9 +24,28 @@ class controladorVistas extends Controller
         return view('Principal');
     } 
 
-    public function showRegistro(){
-        return view('Registro');
+    public function showRegistroComic(){
+        return view('RegistroComic');
     } 
 
+    public function showRegistroArticulo(){
+        return view('RegistroArticulo');
+    } 
+
+    public function showProveedores(){
+        return view('Proveedores');
+    } 
+
+    public function showPedidos(){
+        return view('Pedidos');
+    } 
+
+    public function showStock(){
+        return view('Stock');
+    } 
+
+    public function showVentas(){
+        return view('Ventas');
+    } 
 
 }

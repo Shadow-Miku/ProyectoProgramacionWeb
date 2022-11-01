@@ -5,14 +5,14 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Libro xxxxxxxx registrado',
+            'Articulo xxxxxxxx registrado',
             'success'
           ) </script>"!!}        
     @endif
 
     <div class="container mt-5 col-md-6">
 
-        <h1 class="display-2 text-center mb-5"> Registro de Libros </h1>
+        <h1 class="display-2 text-center mb-5"> Articulos </h1>
 
         
         <!--Errores arriba del formulario
@@ -29,12 +29,12 @@
         <div class="card mb-5">
 
             <div class="card-header fw-bold">
-                Registro de Libros
+                Registro de Articulos
             </div>
 
             <div class="card-body">
 
-                <form class="m-4" method="POST" action="CargarRegistro">
+                <form class="m-4" method="POST" action="CargarRegistroArticulo">
                     @csrf
                     <!--Errores individuales y guardar los datos escritos-->
                     
@@ -78,7 +78,7 @@
 
             <div class="card-footer">
 
-                <button type="submit" class="btn btn-success m-1"> Registrar</button>
+                <button type="submit" class="btn btn-success m-1"> Registrar Articulo</button>
             
             </form>
 
