@@ -5,7 +5,7 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Comic xxxxxxxx registrado',
+            'Comic registrado',
             'success'
           ) </script>"!!}        
     @endif
@@ -77,7 +77,7 @@
                     <div class="mb-3">
                         <label class="form-label">Precio venta</label>
                         <input type="numeric" class="form-control" name="precioVentaCm" value="{{old('precioVentaCm')}}" disabled>
-                        <p class="text-primary fst-italic"> {{ $errors->first('precioVentaCm') }} </p>
+                        <p class="text-primary fst-italic"> <!--{{ $errors->first('precioVentaCm') }}--> </p>
                     </div>
 
                     <div class="mb-3">

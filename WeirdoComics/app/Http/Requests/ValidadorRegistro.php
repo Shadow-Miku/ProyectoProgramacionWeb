@@ -41,6 +41,13 @@ class ValidadorRegistro extends FormRequest
             'precioVentaCm'=>'numeric|required',
             'fechaIngresoCm'=>'required',
             /*Validador Proveedores*/
+            'empresa'=>'required',
+            'direccion'=>'required',
+            'pais'=>'required',
+            'contacto'=>'required',
+            'noFijo'=>'numeric|required|min:7|max:15',
+            'noCelular'=>'numeric|required|min:7|max:15',
+            'correo'=>'email|required',
         ];
     }
 }

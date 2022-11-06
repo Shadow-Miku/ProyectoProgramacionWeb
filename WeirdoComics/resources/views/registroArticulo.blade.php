@@ -5,7 +5,7 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Articulo xxxxxxxx registrado',
+            'Articulo registrado',
             'success'
           ) </script>"!!}        
     @endif

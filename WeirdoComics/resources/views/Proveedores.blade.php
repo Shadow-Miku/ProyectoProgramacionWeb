@@ -5,7 +5,7 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Articulo xxxxxxxx registrado',
+            'Proveedor registrado',
             'success'
           ) </script>"!!}        
     @endif
@@ -40,49 +40,66 @@
                     
                     <div class="mb-3">
                         <label class="form-label" hidden>id de Proveedor en la base de datos</label>
-                        <input type="number" class="form-control" name="id"  hidden>
+                        <input type="number" class="form-control" required name="id"  hidden>
                         <p class="text-primary fst-italic"></p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Empresa</label>
-                        <input type="text" class="form-control" name="empresa" value="{{old('empresa')}}">
+                        <input type="text" class="form-control" required name="empresa" value="{{old('empresa')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('empresa') }} </p>
                     </div>
                     
                     <div class="mb-3">
                         <label class="form-label">Dirección</label>
-                        <input type="text" class="form-control" name="direccion" value="{{old('direccion')}}">
+                        <input type="text" class="form-control" required name="direccion" value="{{old('direccion')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('direccion') }}</p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">País</label>
-                        <input type="text" class="form-control" name="pais" value="{{old('pais')}}">
+                        <input type="text"  
+                        multiple
+                        id="pais"
+                        list="drawpais"
+                        required
+                        size="64"
+                        class="form-control" 
+                        name="pais" 
+                        value="{{old('pais')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('pais') }} </p>
+                        <datalist id="drawpais">
+                            <option value="Mexico">México</option>
+                            <option value="EstadosUnidos">EUA</option>
+                            <option value="Canada">Canadá</option>
+                            <option value="España">España</option>
+                            <option value="ReinoUnido">UK</option>
+                            <option value="Japon">Japón</option>
+                            <option value="Brasil">Brasil</option>
+                          </datalist>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Contacto</label>
-                        <input type="text" class="form-control" name="contacto" value="{{old('contacto')}}">
+                        <input type="text" class="form-control" required name="contacto" value="{{old('contacto')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('contacto') }} </p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">No Fijo</label>
-                        <input type="tel" class="form-control" name="noFijo" value="{{old('noFijo')}}">
+                        <input type="numeric" class="form-control" required name="noFijo" value="{{old('noFijo')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('noFijo') }} </p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">No Celular</label>
-                        <input type="tel" class="form-control" name="noCelular" value="{{old('noCelular')}}">
-                        <p class="text-primary fst-italic"> <!--{{ $errors->first('noCelular') }}--> </p>
+                        <input type="numeric" class="form-control" required name="noCelular" value="{{old('noCelular')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('noCelular') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Correp</label>
-                        <input type="email" class="form-control" name="correo" value="{{old('correo')}}">
+                        <label class="form-label">Correo</label>
+                        <input type="email" class="form-control" required name="correo" value="{{old('correo')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('correo') }} </p>
                     </div>
 
