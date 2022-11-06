@@ -39,39 +39,51 @@
                     <!--Errores individuales y guardar los datos escritos-->
                     
                     <div class="mb-3">
-                        <label class="form-label">ISBN: </label>
-                        <input type="numeric" class="form-control" name="intISBN" value="{{old('intISBN')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intISBN') }} </p>
+                        <label class="form-label" hidden>id de articulo en la base de datos</label>
+                        <input type="number" class="form-control" name="id"  hidden>
+                        <p class="text-primary fst-italic"></p>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tipo</label>
+                        <input type="text" class="form-control" name="tipo" value="{{old('tipo')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('tipo') }} </p>
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label">Titulo: </label>
-                        <input type="text" class="form-control" name="txtTitulo" value="{{old('txtTitulo')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtTitulo') }}</p>
+                        <label class="form-label">Marca</label>
+                        <input type="text" class="form-control" name="marca" value="{{old('marca')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('marca') }}</p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Autor: </label>
-                        <input type="text" class="form-control" name="txtAutor" value="{{old('txtAutor')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtAutor') }} </p>
+                        <label class="form-label">Descripción</label>
+                        <input type="text" class="form-control" name="descripcion" value="{{old('descripcion')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('descripcion') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Paginas: </label>
-                        <input type="numeric" class="form-control" name="intPaginas" value="{{old('intPaginas')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intPaginas') }} </p>
+                        <label class="form-label">Cantidad de Articulos</label>
+                        <input type="numeric" class="form-control" name="cantidadArticulos" value="{{old('cantidadArticulos')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('cantidadArticulos') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Editorial: </label>
-                        <input type="text" class="form-control" name="txtEditorial" value="{{old('txtEditorial')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtEditorial') }} </p>
+                        <label class="form-label">Precio compra Articulo</label>
+                        <input type="numeric" class="form-control" name="precioCompraAr" value="{{old('precioCompraAr')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('precioCompraAr') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Email de la editorial: </label>
-                        <input type="email" class="form-control" name="email" value="{{old('email')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('email') }} </p>
+                        <label class="form-label">Precio venta</label>
+                        <input type="numeric" class="form-control" name="precioVentaAr" value="{{old('precioVentaAr')}}" disabled>
+                        <p class="text-primary fst-italic"> <!--{{ $errors->first('precioVentaAr') }}--> </p>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Fecha ingreso</label>
+                        <input type="datetime-local" name="datetime" id="datetime" class="form-control" name="fechaIngresoAr" value="{{old('fechaIngresoAr')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('fechaIngresoAr') }} </p>
                     </div>
 
             </div>
