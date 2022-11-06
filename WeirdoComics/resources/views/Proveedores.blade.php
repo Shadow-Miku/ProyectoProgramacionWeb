@@ -69,13 +69,13 @@
                         value="{{old('pais')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('pais') }} </p>
                         <datalist id="drawpais">
-                            <option value="Mexico">México</option>
-                            <option value="EstadosUnidos">EUA</option>
-                            <option value="Canada">Canadá</option>
-                            <option value="España">España</option>
-                            <option value="ReinoUnido">UK</option>
-                            <option value="Japon">Japón</option>
-                            <option value="Brasil">Brasil</option>
+                            <option value="México">Mex</option>
+                            <option value="Estados Unidos">EUA</option>
+                            <option value="Canadá">Can</option>
+                            <option value="España">Spain</option>
+                            <option value="Reino Unido">UK</option>
+                            <option value="Japón">Jap</option>
+                            <option value="Brasil">Bra</option>
                           </datalist>
                     </div>
 
