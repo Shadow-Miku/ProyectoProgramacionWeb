@@ -23,67 +23,74 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button></div>
             @endforeach
       
-        @endif-->
+        @endif--> 
+
+        <form class="m-4" method="POST" action="Stock">
+            @csrf
+            <!--Errores individuales y guardar los datos escritos-->
             
-
-        <div class="card mb-5">
-
-            <div class="card-header fw-bold">
-                Registro de Proveedores
+            <div class="mb-3">
+                <label class="form-label">Filtrado de stock: </label>
+                <select  id="lista" required name="filtro" value="{{old('filtro')}}">
+                    <option value="Articulos">Articulos</option>
+                    <option value="comics">Comics</option>
+                </select>
             </div>
 
-            <div class="card-body">
+            <label for="site-search">Buscar: </label>
+                <input type="search" required id="stock" name="stock">
 
-                <form class="m-4" method="POST" action="CargarRegistroArticulo">
-                    @csrf
-                    <!--Errores individuales y guardar los datos escritos-->
-                    
-                    <div class="mb-3">
-                        <label class="form-label">ISBN: </label>
-                        <input type="numeric" class="form-control" name="intISBN" value="{{old('intISBN')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intISBN') }} </p>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label class="form-label">Titulo: </label>
-                        <input type="text" class="form-control" name="txtTitulo" value="{{old('txtTitulo')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtTitulo') }}</p>
-                    </div>
+                <button>Buscar</button>
+            <br>
 
-                    <div class="mb-3">
-                        <label class="form-label">Autor: </label>
-                        <input type="text" class="form-control" name="txtAutor" value="{{old('txtAutor')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtAutor') }} </p>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Paginas: </label>
-                        <input type="numeric" class="form-control" name="intPaginas" value="{{old('intPaginas')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intPaginas') }} </p>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Editorial: </label>
-                        <input type="text" class="form-control" name="txtEditorial" value="{{old('txtEditorial')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtEditorial') }} </p>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Email de la editorial: </label>
-                        <input type="email" class="form-control" name="email" value="{{old('email')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('email') }} </p>
-                    </div>
-
-            </div>
-
-            <div class="card-footer">
-
-                <button type="submit" class="btn btn-success m-1"> Registrar Articulo</button>
-            
-            </form>
-
-            </div>
-        </div>
     </div>
+
+    <div>
+    
+        <table class="table table-borderless table-striped table-hover" >
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Articulo o Comic</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Figura de Starwars Bad Batch</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td >El Batman que rie</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>The Punisher</td>
+                    <td>4</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">4</th>
+                    <td>Figura de Milim</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Capitan America</td>
+                    <td>6</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">6</th>
+                    <td>The amazing Hulk</td>
+                    <td>1</td>
+                </tr>
+              </tbody> 
+        </table>
+
+    </form>
+
+        
     
 @stop

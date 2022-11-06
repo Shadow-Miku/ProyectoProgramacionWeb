@@ -108,7 +108,7 @@
 
             <div class="card-footer">
 
-                <button type="submit" class="btn btn-success m-1"> Registrar Articulo</button>
+                <button type="submit" class="btn btn-success m-1"> Registrar Proveedor </button>
             
             </form>
 
