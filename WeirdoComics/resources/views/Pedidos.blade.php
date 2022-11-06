@@ -29,7 +29,7 @@
         <div class="card mb-5">
 
             <div class="card-header fw-bold">
-                Registro de Proveedores
+                Levantamiento de pedidos
             </div>
 
             <div class="card-body">

@@ -13,7 +13,7 @@
     </head>
 
     <body>
-        <h1 align="center"> Bienvenido empleado xxxxxxxx </h1> <br>
+        <h1 align="center"> Bienvenido xxxxxxxx </h1> <br>
 
         <main class="main columns">
             <section class="column main-column">

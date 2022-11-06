@@ -5,7 +5,7 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Articulo xxxxxxxx registrado',
+            'Proveedor registrado',
             'success'
           ) </script>"!!}        
     @endif
@@ -34,51 +34,81 @@
 
             <div class="card-body">
 
-                <form class="m-4" method="POST" action="CargarRegistroArticulo">
+                <form class="m-4" method="POST" action="CargarRegistroProveedor">
                     @csrf
                     <!--Errores individuales y guardar los datos escritos-->
                     
                     <div class="mb-3">
-                        <label class="form-label">ISBN: </label>
-                        <input type="numeric" class="form-control" name="intISBN" value="{{old('intISBN')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intISBN') }} </p>
+                        <label class="form-label" hidden>id de Proveedor en la base de datos</label>
+                        <input type="number" class="form-control" required name="id"  hidden>
+                        <p class="text-primary fst-italic"></p>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Empresa</label>
+                        <input type="text" class="form-control" required name="empresa" value="{{old('empresa')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('empresa') }} </p>
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label">Titulo: </label>
-                        <input type="text" class="form-control" name="txtTitulo" value="{{old('txtTitulo')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtTitulo') }}</p>
+                        <label class="form-label">Dirección</label>
+                        <input type="text" class="form-control" required name="direccion" value="{{old('direccion')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('direccion') }}</p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Autor: </label>
-                        <input type="text" class="form-control" name="txtAutor" value="{{old('txtAutor')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtAutor') }} </p>
+                        <label class="form-label">País</label>
+                        <input type="text"  
+                        multiple
+                        id="pais"
+                        list="drawpais"
+                        required
+                        size="64"
+                        class="form-control" 
+                        name="pais" 
+                        value="{{old('pais')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('pais') }} </p>
+                        <datalist id="drawpais">
+                            <option value="México">Mex</option>
+                            <option value="Estados Unidos">EUA</option>
+                            <option value="Canadá">Can</option>
+                            <option value="España">Spain</option>
+                            <option value="Reino Unido">UK</option>
+                            <option value="Japón">Jap</option>
+                            <option value="Brasil">Bra</option>
+                          </datalist>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Paginas: </label>
-                        <input type="numeric" class="form-control" name="intPaginas" value="{{old('intPaginas')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intPaginas') }} </p>
+                        <label class="form-label">Contacto</label>
+                        <input type="text" class="form-control" required name="contacto" value="{{old('contacto')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('contacto') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Editorial: </label>
-                        <input type="text" class="form-control" name="txtEditorial" value="{{old('txtEditorial')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtEditorial') }} </p>
+                        <label class="form-label">No Fijo</label>
+                        <input type="numeric" class="form-control" required name="noFijo" value="{{old('noFijo')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('noFijo') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Email de la editorial: </label>
-                        <input type="email" class="form-control" name="email" value="{{old('email')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('email') }} </p>
+                        <label class="form-label">No Celular</label>
+                        <input type="numeric" class="form-control" required name="noCelular" value="{{old('noCelular')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('noCelular') }} </p>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email" class="form-control" required name="correo" value="{{old('correo')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('correo') }} </p>
+                    </div>
+
 
             </div>
 
             <div class="card-footer">
 
-                <button type="submit" class="btn btn-success m-1"> Registrar Articulo</button>
+                <button type="submit" class="btn btn-success m-1"> Registrar Proveedor </button>
             
             </form>
 

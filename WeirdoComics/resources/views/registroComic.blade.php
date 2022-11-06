@@ -5,7 +5,7 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Comic xxxxxxxx registrado',
+            'Comic registrado',
             'success'
           ) </script>"!!}        
     @endif
@@ -39,41 +39,52 @@
                     <!--Errores individuales y guardar los datos escritos-->
                     
                     <div class="mb-3">
-                        <label class="form-label">ISBN: </label>
-                        <input type="numeric" class="form-control" name="intISBN" value="{{old('intISBN')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intISBN') }} </p>
+                        <label class="form-label" hidden>id de comic en la base de datos</label>
+                        <input type="number" class="form-control" hidden>
+                        <p class="text-primary fst-italic"></p>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" value="{{old('nombre')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('nombre') }} </p>
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label">Titulo: </label>
-                        <input type="text" class="form-control" name="txtTitulo" value="{{old('txtTitulo')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtTitulo') }}</p>
+                        <label class="form-label">Edición</label>
+                        <input type="text" class="form-control" name="edicion" value="{{old('edicion')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('edicion') }}</p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Autor: </label>
-                        <input type="text" class="form-control" name="txtAutor" value="{{old('txtAutor')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtAutor') }} </p>
+                        <label class="form-label">Compañia</label>
+                        <input type="text" class="form-control" name="compañia" value="{{old('compañia')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('compañia') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Paginas: </label>
-                        <input type="numeric" class="form-control" name="intPaginas" value="{{old('intPaginas')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('intPaginas') }} </p>
+                        <label class="form-label">Cantidad de Comics</label>
+                        <input type="numeric" class="form-control" name="cantidadComics" value="{{old('cantidadComics')}}">
+                        <p class="text-primary fst-italic"> <!--{{ $errors->first('cantidadComics') }}--> </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Editorial: </label>
-                        <input type="text" class="form-control" name="txtEditorial" value="{{old('txtEditorial')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('txtEditorial') }} </p>
+                        <label class="form-label">Precio compra Comic</label>
+                        <input type="numeric" class="form-control" name="precioCompraCm" value="{{old('precioCompraCm')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('precioCompraCm') }} </p>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Email de la editorial: </label>
-                        <input type="email" class="form-control" name="email" value="{{old('email')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('email') }} </p>
+                        <label class="form-label">Precio venta</label>
+                        <input type="numeric" class="form-control" name="precioVentaCm" value="{{old('precioVentaCm')}}" disabled>
+                        <p class="text-primary fst-italic"> <!--{{ $errors->first('precioVentaCm') }}--> </p>
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Fecha ingreso</label>
+                        <input type="datetime-local" name="datetime" id="datetime" class="form-control" name="fechaIngreso" value="{{old('fechaIngreso')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('fechaIngresoAr') }} </p>
+                    </div>
             </div>
 
             <div class="card-footer">

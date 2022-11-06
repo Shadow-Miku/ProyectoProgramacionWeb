@@ -13,6 +13,14 @@ class controladorVistas extends Controller
 
     public function procesarRegistroArticulo(ValidadorRegistro $req){
         return redirect('RegistroArticulo')->with('confirmacion','Registro de Articulo Correcto');
+    } /* Funcion para registrar los articulos en el formulario   procesar registro es lo que se mandara a llamar en la ruta */
+
+    public function procesarRegistroProveedor(ValidadorRegistro $req){
+        return redirect('Proveedores')->with('confirmacion','Registro de Proveedor Correcto');
+    } /* Funcion para registrar los comics en el formulario   procesar registro es lo que se mandara a llamar en la ruta */
+
+    public function procesarRegistroPedido(ValidadorRegistro $req){
+        return redirect('Pedidos')->with('confirmacion','Registro de Articulo Correcto');
     } /* Funcion para registrar los comics en el formulario   procesar registro es lo que se mandara a llamar en la ruta */
 
     /*Funciones para cada vista de la pagina*/

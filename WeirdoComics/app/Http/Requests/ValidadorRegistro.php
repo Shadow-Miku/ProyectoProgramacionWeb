@@ -24,16 +24,32 @@ class ValidadorRegistro extends FormRequest
     public function rules()
     {
         return [
-            'intISBN'=>'required',
-            'txtTitulo'=>'required',
-            'txtAutor'=>'required',
-            'intPaginas'=>'required',
-            'txtEditorial'=>'required',
-            'email'=>'required',
-            'intISBN'=>'numeric|required|min:13',
-            'intPaginas'=>'numeric|required',
-            'email'=>'required|string|email',
-            'txtAutor'=>'required|min:4',
+            /*Validador Articulos */
+            'tipo'=>'required',
+            'marca'=>'required',
+            'descripcion'=>'required',
+            'cantidadArticulos'=>'numeric|required',
+            'precioCompraAr'=>'numeric|required',
+            'precioVentaAr'=>'numeric|required',
+            'fechaIngresoAr'=>'required',
+            /*Validador Comic*/
+            'nombre'=>'required',
+            'edicion'=>'required',
+            'compañia'=>'required',
+            'cantidadComics'=>'numeric|required',
+            'precioCompraCm'=>'numeric|required',
+            'precioVentaCm'=>'numeric|required',
+            'fechaIngresoCm'=>'required',
+            /*Validador Proveedores*/
+            'empresa'=>'required',
+            'direccion'=>'required',
+            'pais'=>'required',
+            'contacto'=>'required',
+            'noFijo'=>'numeric|required|min:7|max:15',
+            'noCelular'=>'numeric|required|min:7|max:15',
+            'correo'=>'email|required',
+            /*Validador de Filtro Stock*/
+            'filtro'=>'required',
         ];
     }
 }
