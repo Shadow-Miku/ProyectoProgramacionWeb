@@ -40,6 +40,7 @@ class ValidadorRegistro extends FormRequest
             'precioCompraCm'=>'numeric|required',
             'precioVentaCm'=>'numeric|required',
             'fechaIngresoCm'=>'required',
+            /*Validador Proveedores*/
         ];
     }
 }
