@@ -49,7 +49,7 @@ class ValidadorRegistro extends FormRequest
             'noCelular'=>'numeric|required|min:7|max:15',
             'correo'=>'email|required',
             /*Validador de Filtro Stock*/
-            'filtro'=>'required',
+            'filtro'=>'required'
         ];
     }
 }

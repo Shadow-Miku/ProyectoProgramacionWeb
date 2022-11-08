@@ -6,8 +6,7 @@
         {!!" <script> Swal.fire(
             'Muy bien!',
             'Articulo registrado',
-            'success'
-          ) </script>"!!}        
+            'success') </script>"!!}        
     @endif
 
     <div class="container mt-5 col-md-6">
@@ -64,7 +63,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">Cantidad de Articulos</label>
-                        <input type="numeric" class="form-control" name="cantidadArticulos" value="{{old('cantidadArticulos')}}">
+                        <input type="number" class="form-control" name="cantidadArticulos" value="{{old('cantidadArticulos')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('cantidadArticulos') }} </p>
                     </div>
 
