@@ -32,7 +32,7 @@ class ValidadorRegistro extends FormRequest
             'precioCompraAr'=>'numeric|required',
             'precioVentaAr'=>'numeric|required',
             'fechaIngresoAr'=>'required',
-            /*Validador Comic*/
+            /* Validador Comic
             'nombre'=>'required',
             'edicion'=>'required',
             'compañia'=>'required',
@@ -40,7 +40,7 @@ class ValidadorRegistro extends FormRequest
             'precioCompraCm'=>'numeric|required',
             'precioVentaCm'=>'numeric|required',
             'fechaIngresoCm'=>'required',
-            /*Validador Proveedores*/
+            Validador Proveedores
             'empresa'=>'required',
             'direccion'=>'required',
             'pais'=>'required',
@@ -48,8 +48,8 @@ class ValidadorRegistro extends FormRequest
             'noFijo'=>'numeric|required|min:7|max:15',
             'noCelular'=>'numeric|required|min:7|max:15',
             'correo'=>'email|required',
-            /*Validador de Filtro Stock*/
-            'filtro'=>'required'
+            Validador de Filtro Stock
+            'filtro'=>'required' */
         ];
     }
 }

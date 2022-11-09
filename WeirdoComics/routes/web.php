@@ -25,6 +25,6 @@ Route::get('Ventas', [controladorVistas::class,'showVentas'])->name('apVentas');
 
 /*Rutas POST para envio de datos en formulario*/
 Route::post('CargarRegistroComic', [controladorVistas::class,'procesarRegistroComic'])->name('CarRegCom');
-Route::post('CargarRegistroArticulo', [controladorVistas::class,'procesarRegistroArticulo'])->name('CarRegArt');
+Route::get('CargarRegistroArticulo', [controladorVistas::class,'procesarRegistroArticulo'])->name('CarRegArt');
 Route::post('CargarRegistroProveedor', [controladorVistas::class,'procesarRegistroProveedor'])->name('CarRegPro');
 Route::post('CargarRegistroPedido', [controladorVistas::class,'procesarRegistroPedido'])->name('CarRegPed');

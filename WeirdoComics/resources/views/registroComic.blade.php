@@ -65,7 +65,7 @@
                     <div class="mb-3">
                         <label class="form-label">Cantidad de Comics</label>
                         <input type="numeric" class="form-control" name="cantidadComics" value="{{old('cantidadComics')}}">
-                        <p class="text-primary fst-italic"> <!--{{ $errors->first('cantidadComics') }}--> </p>
+                        <p class="text-primary fst-italic"> {{ $errors->first('cantidadComics') }} </p>
                     </div>
 
                     <div class="mb-3">
@@ -82,8 +82,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Fecha ingreso</label>
-                        <input type="datetime-local" name="datetime" id="datetime" class="form-control" name="fechaIngreso" value="{{old('fechaIngreso')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('fechaIngresoAr') }} </p>
+                        <input type="datetime-local" id="datetime" class="form-control" name="fechaIngresoCm" value="{{old('fechaIngresoCm')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('fechaIngresoCm') }} </p>
                     </div>
             </div>
 

@@ -2,11 +2,11 @@
 
 @section('contenido')
 
-    @if (session()->has('confirmacion'))
-        {!!" <script> Swal.fire(
+    @if (session()->has('confirmacion2'))
+        {!!" <script>Swal.fire(
             'Muy bien!',
             'Articulo registrado',
-            'success') </script>"!!}        
+            'success')</script>"!!}        
     @endif
 
     <div class="container mt-5 col-md-6">
@@ -33,7 +33,7 @@
 
             <div class="card-body">
 
-                <form class="m-4" method="POST" action="CargarRegistroArticulo">
+                <form class="m-4" method="GET" action="{{route('CarRegArt')}}">
                     @csrf
                     <!--Errores individuales y guardar los datos escritos-->
                     
@@ -75,13 +75,13 @@
 
                     <div class="mb-3">
                         <label class="form-label">Precio venta</label>
-                        <input type="numeric" class="form-control" name="precioVentaAr" value="{{old('precioVentaAr')}}" disabled>
-                        <p class="text-primary fst-italic"> <!--{{ $errors->first('precioVentaAr') }}--> </p>
+                        <input type="numeric" class="form-control" name="precioVentaAr" value="{{old('precioVentaAr')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('precioVentaAr') }} </p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Fecha ingreso</label>
-                        <input type="datetime-local" name="datetime" id="datetime" class="form-control" name="fechaIngresoAr" value="{{old('fechaIngresoAr')}}">
+                        <input type="datetime-local" id="datetime" class="form-control" name="fechaIngresoAr" value="{{old('fechaIngresoAr')}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('fechaIngresoAr') }} </p>
                     </div>
 
@@ -96,5 +96,4 @@
             </div>
         </div>
     </div>
-    
-@stop
+@endsection
