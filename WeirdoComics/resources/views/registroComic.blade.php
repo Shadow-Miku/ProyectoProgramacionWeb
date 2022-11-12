@@ -65,7 +65,7 @@
                     <div class="mb-3">
                         <label class="form-label">Cantidad de Comics</label>
                         <input type="numeric" class="form-control" name="cantidadComics" value="{{old('cantidadComics')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('cantidadComics') }} </p>
+                        <p class="text-alert fst-italic"> {{ $errors->first('cantidadComics') }} </p>
                     </div>
 
                     <div class="mb-3">
